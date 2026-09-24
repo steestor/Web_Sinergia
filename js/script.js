@@ -59,4 +59,34 @@ document.addEventListener('DOMContentLoaded', function () {
       observer.observe(section);
     });
   }
+
+  // Revela con una animación suave los bloques marcados con data-reveal.
+  // La clase js-reveal solo se activa aquí: si algo falla más abajo, el
+  // contenido se queda visible por defecto (nunca oculto sin salvavidas).
+  var revealEls = document.querySelectorAll('[data-reveal]');
+
+  if ('IntersectionObserver' in window && revealEls.length) {
+    document.documentElement.classList.add('js-reveal');
+
+    var revealObserver = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+    revealEls.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+
+    // Salvavidas: si algo impide que el observer dispare (fallo en un
+    // plugin de WordPress, etc.), el contenido se revela igualmente.
+    window.setTimeout(function () {
+      revealEls.forEach(function (el) {
+        el.classList.add('is-visible');
+      });
+    }, 4000);
+  }
 });
