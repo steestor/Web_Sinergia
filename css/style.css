@@ -162,11 +162,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 6px 0;
 }
 
 .logo img {
-  height: 82px;
+  height: 130px;
   width: auto;
 }
 
@@ -596,6 +596,10 @@ p {
 }
 
 @media (max-width: 768px) {
+  .logo img {
+    height: 90px;
+  }
+
   .main-nav {
     position: fixed;
     top: 0;
@@ -681,6 +685,6 @@ p {
   }
 
   .logo img {
-    height: 58px;
+    height: 66px;
   }
 }
