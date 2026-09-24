@@ -343,6 +343,10 @@ p {
   gap: 24px;
 }
 
+.features-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .feature-card {
   background: var(--color-bg-soft);
   border: 1px solid transparent;
