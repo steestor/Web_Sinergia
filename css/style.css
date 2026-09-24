@@ -161,13 +161,8 @@ p {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 6px 0;
-}
-
-.logo img {
-  height: 130px;
-  width: auto;
+  justify-content: flex-end;
+  padding: 18px 0;
 }
 
 .main-nav {
@@ -238,6 +233,12 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+}
+
+.hero-logo {
+  height: 120px;
+  width: auto;
+  margin-bottom: 20px;
 }
 
 .hero-content h1 {
@@ -596,10 +597,6 @@ p {
 }
 
 @media (max-width: 768px) {
-  .logo img {
-    height: 90px;
-  }
-
   .main-nav {
     position: fixed;
     top: 0;
@@ -684,7 +681,7 @@ p {
     height: 240px;
   }
 
-  .logo img {
-    height: 66px;
+  .hero-logo {
+    height: 84px;
   }
 }
