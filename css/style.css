@@ -162,11 +162,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  padding: 12px 0;
 }
 
 .logo img {
-  height: 56px;
+  height: 82px;
   width: auto;
 }
 
@@ -681,6 +681,6 @@ p {
   }
 
   .logo img {
-    height: 44px;
+    height: 58px;
   }
 }
