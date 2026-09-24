@@ -236,9 +236,10 @@ p {
 }
 
 .hero-logo {
-  height: 120px;
+  display: block;
+  height: 160px;
   width: auto;
-  margin-bottom: 20px;
+  margin: 0 auto 24px;
 }
 
 .hero-content h1 {
@@ -682,6 +683,6 @@ p {
   }
 
   .hero-logo {
-    height: 84px;
+    height: 110px;
   }
 }
