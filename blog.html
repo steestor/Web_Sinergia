@@ -65,27 +65,28 @@
       </div>
 
       <div class="features-grid features-grid--five">
-        <div class="feature-card card-white" data-reveal>
+        <div class="feature-card card-white filterable" data-filter-category="estudio" data-reveal>
           <h3>Estudio y aprendizaje</h3>
           <p>Técnicas de estudio, organización, concentración, hábitos.</p>
         </div>
-        <div class="feature-card card-white" data-reveal>
+        <div class="feature-card card-white filterable" data-filter-category="familias" data-reveal>
           <h3>Familias y educación</h3>
           <p>Consejos y contenidos dirigidos a familias.</p>
         </div>
-        <div class="feature-card card-white" data-reveal>
+        <div class="feature-card card-white filterable" data-filter-category="pau" data-reveal>
           <h3>PAU y pruebas de acceso</h3>
           <p>Preparación, organización, novedades, consejos para exámenes.</p>
         </div>
-        <div class="feature-card card-white" data-reveal>
+        <div class="feature-card card-white filterable" data-filter-category="valencia" data-reveal>
           <h3>Valencià</h3>
           <p>CIEACOVA, JQCV, EOI, expresión escrita y oral, preparación de pruebas.</p>
         </div>
-        <div class="feature-card card-white" data-reveal>
+        <div class="feature-card card-white filterable" data-filter-category="universidad" data-reveal>
           <h3>Universidad y adultos</h3>
           <p>Volver a estudiar, organización, herramientas, informática, formación.</p>
         </div>
       </div>
+      <p style="margin-top: 18px; font-size: 0.9rem; color: var(--color-text-muted);">Pulsa una categoría para filtrar los artículos de abajo.</p>
     </div>
   </section>
 
@@ -94,10 +95,11 @@
     <div class="container">
       <div class="section-intro" data-reveal>
         <h2>Lo último en Sinergia.</h2>
+        <p class="blog-filter-status">Mostrando: <strong></strong> · <button type="button">ver todas</button></p>
       </div>
 
       <div class="blog-grid">
-        <article class="blog-card" data-reveal>
+        <article class="blog-card" data-article-category="pau" data-reveal>
           <img src="images/hero-classroom.jpg" alt="">
           <div class="blog-card-body">
             <span class="category">PAU y pruebas de acceso</span>
@@ -106,7 +108,7 @@
             <a href="#" class="btn-link">Leer más →</a>
           </div>
         </article>
-        <article class="blog-card" data-reveal>
+        <article class="blog-card" data-article-category="valencia" data-reveal>
           <img src="images/esto-es-sinergia.jpg" alt="">
           <div class="blog-card-body">
             <span class="category">Valencià</span>
@@ -115,7 +117,7 @@
             <a href="#" class="btn-link">Leer más →</a>
           </div>
         </article>
-        <article class="blog-card" data-reveal>
+        <article class="blog-card" data-article-category="familias" data-reveal>
           <img src="images/hero-classroom.jpg" alt="">
           <div class="blog-card-body">
             <span class="category">Familias y educación</span>
@@ -125,6 +127,8 @@
           </div>
         </article>
       </div>
+
+      <p class="blog-empty">Aún no hay artículos publicados en esta categoría. ¡Vuelve pronto!</p>
 
       <div class="blog-grid-footer">
         <a href="#" class="btn btn-primary">Ver todos los artículos →</a>

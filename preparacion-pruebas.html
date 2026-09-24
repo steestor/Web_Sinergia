@@ -56,18 +56,30 @@
         <h2>Preparamos contigo el camino.</h2>
       </div>
 
-      <div class="services-grid services-grid--three">
-        <div class="service-card" data-reveal>
-          <h3>PAU</h3>
-          <p>Preparación de asignaturas específicas para las Pruebas de Acceso a la Universidad.</p>
+      <div data-tabs data-reveal>
+        <div class="tabs-nav" role="tablist">
+          <button class="tabs-btn is-active" type="button" role="tab" aria-selected="true" data-tab-target="#tab-pau">PAU</button>
+          <button class="tabs-btn" type="button" role="tab" aria-selected="false" data-tab-target="#tab-pce">PCE UNED</button>
+          <button class="tabs-btn" type="button" role="tab" aria-selected="false" data-tab-target="#tab-acceso">Pruebas de acceso</button>
         </div>
-        <div class="service-card" data-reveal>
-          <h3>PCE UNED</h3>
-          <p>Preparación adaptada a las materias y características de las Pruebas de Competencias Específicas.</p>
+
+        <div class="tabs-panel is-active" id="tab-pau" role="tabpanel">
+          <div class="tabs-panel-card">
+            <h3>PAU</h3>
+            <p>Preparación de asignaturas específicas para las Pruebas de Acceso a la Universidad.</p>
+          </div>
         </div>
-        <div class="service-card" data-reveal>
-          <h3>Pruebas de acceso</h3>
-          <p>Preparación para diferentes pruebas de acceso según el objetivo académico del alumno.</p>
+        <div class="tabs-panel" id="tab-pce" role="tabpanel">
+          <div class="tabs-panel-card">
+            <h3>PCE UNED</h3>
+            <p>Preparación adaptada a las materias y características de las Pruebas de Competencias Específicas.</p>
+          </div>
+        </div>
+        <div class="tabs-panel" id="tab-acceso" role="tabpanel">
+          <div class="tabs-panel-card">
+            <h3>Pruebas de acceso</h3>
+            <p>Preparación para diferentes pruebas de acceso según el objetivo académico del alumno.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -81,19 +93,19 @@
         <h2>Necesitamos saber de dónde partes.</h2>
       </div>
 
-      <div class="features-grid features-grid--three">
-        <div class="feature-card" data-reveal>
-          <span class="num">01</span>
+      <div class="process-track">
+        <div class="process-step" data-reveal>
+          <div class="process-dot">01</div>
           <h3>Conocemos tu situación</h3>
           <p>Qué quieres preparar, cuándo te examinas y cuál es tu punto de partida.</p>
         </div>
-        <div class="feature-card" data-reveal>
-          <span class="num">02</span>
+        <div class="process-step" data-reveal>
+          <div class="process-dot">02</div>
           <h3>Marcamos el objetivo</h3>
           <p>Valoramos las materias, contenidos y tiempo disponible.</p>
         </div>
-        <div class="feature-card" data-reveal>
-          <span class="num">03</span>
+        <div class="process-step" data-reveal>
+          <div class="process-dot">03</div>
           <h3>Organizamos la preparación</h3>
           <p>Establecemos una estrategia de trabajo para llegar al examen con los contenidos preparados.</p>
         </div>

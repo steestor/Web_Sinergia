@@ -776,6 +776,167 @@ p {
   margin-top: 44px;
 }
 
+/* ---------- Filtro de categoría del blog ---------- */
+.feature-card.filterable {
+  cursor: pointer;
+  text-align: left;
+}
+
+.feature-card.filterable:hover {
+  border-color: rgba(226, 14, 115, 0.25);
+}
+
+.feature-card.filterable.is-active {
+  background: var(--color-pink);
+  border-color: var(--color-pink);
+}
+
+.feature-card.filterable.is-active h3,
+.feature-card.filterable.is-active p {
+  color: #fff;
+}
+
+.blog-filter-status {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin: -12px 0 32px;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.blog-filter-status.is-active {
+  display: flex;
+}
+
+.blog-filter-status strong {
+  color: var(--color-text);
+}
+
+.blog-filter-status button {
+  color: var(--color-pink);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.blog-empty {
+  display: none;
+  color: var(--color-text-muted);
+  padding: 40px 0;
+}
+
+.blog-empty.is-active {
+  display: block;
+}
+
+/* ---------- Diagrama de proceso (pasos conectados) ---------- */
+.process-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+
+.process-track::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  right: 28px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(226, 14, 115, 0.35) 0,
+    rgba(226, 14, 115, 0.35) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+.process-step {
+  position: relative;
+  z-index: 1;
+}
+
+.process-dot {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-pink);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 20px;
+}
+
+.process-step h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+/* ---------- Pestañas interactivas ---------- */
+.tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.tabs-btn {
+  padding: 14px 26px;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--color-border);
+  background: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+  transition: all 0.22s var(--ease);
+}
+
+.tabs-btn:hover {
+  border-color: var(--color-pink);
+  color: var(--color-text);
+}
+
+.tabs-btn.is-active {
+  background: var(--color-pink);
+  border-color: var(--color-pink);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.tabs-panel {
+  display: none;
+}
+
+.tabs-panel.is-active {
+  display: block;
+}
+
+.tabs-panel-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 44px;
+  box-shadow: var(--shadow-md);
+}
+
+.tabs-panel-card h3 {
+  margin-bottom: 14px;
+}
+
+.tabs-panel-card p {
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 0;
+}
+
 /* =========================================================
    Responsive
    ========================================================= */
@@ -831,6 +992,42 @@ p {
 }
 
 @media (max-width: 768px) {
+  .process-track {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .process-track::before {
+    top: 0;
+    bottom: 0;
+    left: 27px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    background: repeating-linear-gradient(
+      180deg,
+      rgba(226, 14, 115, 0.35) 0,
+      rgba(226, 14, 115, 0.35) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+  }
+
+  .process-step {
+    padding-left: 76px;
+  }
+
+  .process-dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-bottom: 0;
+  }
+
+  .tabs-panel-card {
+    padding: 30px;
+  }
+
   .main-nav {
     position: fixed;
     top: 0;
