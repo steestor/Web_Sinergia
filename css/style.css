@@ -22,12 +22,12 @@
   --radius-sm: 8px;
   --radius-pill: 6px;
 
-  --shadow-sm: 0 2px 10px rgba(17, 17, 31, 0.06);
-  --shadow-md: 0 12px 28px rgba(17, 17, 31, 0.09);
-  --shadow-lg: 0 24px 56px rgba(17, 17, 31, 0.14);
+  --shadow-sm: 0 4px 16px rgba(17, 17, 31, 0.10);
+  --shadow-md: 0 16px 36px rgba(17, 17, 31, 0.14);
+  --shadow-lg: 0 30px 64px rgba(17, 17, 31, 0.20);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 
-  --section-padding: 96px 0;
+  --space-section: 96px;
 }
 
 /* [data-reveal] elements stay fully visible unless JS confirms it can
@@ -273,7 +273,7 @@ p {
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 80px 0 100px;
+  padding: var(--space-section) 0;
 }
 
 .hero .container {
@@ -324,7 +324,7 @@ p {
 
 /* ---------- Features (Mucho mas que clases de repaso) ---------- */
 .features {
-  padding: var(--section-padding);
+  padding: var(--space-section) 0;
   background: var(--color-bg);
 }
 
@@ -334,7 +334,7 @@ p {
 }
 
 .features .section-intro h2 {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .features-grid {
@@ -348,13 +348,14 @@ p {
   border: 1px solid transparent;
   border-radius: var(--radius-lg);
   padding: 32px 26px;
+  box-shadow: var(--shadow-sm);
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(226, 14, 115, 0.12);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+  border-color: rgba(226, 14, 115, 0.14);
+  box-shadow: var(--shadow-lg);
 }
 
 .feature-card .num {
@@ -378,7 +379,7 @@ p {
 
 /* ---------- Esto es Sinergia ---------- */
 .about {
-  padding: var(--section-padding);
+  padding: var(--space-section) 0;
 }
 
 .about .container {
@@ -386,10 +387,6 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-}
-
-.about-content .section-label {
-  margin-bottom: 8px;
 }
 
 .about-content h2 {
@@ -425,7 +422,7 @@ p {
 
 /* ---------- Encuentra lo que necesitas (services) ---------- */
 .services {
-  padding: var(--section-padding);
+  padding: var(--space-section) 0;
   background: var(--color-bg-soft);
 }
 
@@ -435,7 +432,7 @@ p {
 }
 
 .services .section-intro h2 {
-  margin: 10px 0 18px;
+  margin-bottom: 20px;
 }
 
 .services-grid {
@@ -448,13 +445,13 @@ p {
   background: #fff;
   border-radius: var(--radius-lg);
   padding: 34px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
 }
 
 .service-card h3 {
@@ -479,7 +476,7 @@ p {
 /* ---------- CTA (Cuentanos que buscas) ---------- */
 .cta {
   background: var(--color-dark);
-  padding: 90px 0;
+  padding: var(--space-section) 0;
 }
 
 .cta .container {
@@ -504,7 +501,7 @@ p {
 
 /* ---------- Estamos aqui / Empezamos (contact intro) ---------- */
 .contact-intro {
-  padding: 90px 0 60px;
+  padding: var(--space-section) 0 60px;
 }
 
 .contact-intro .section-label {
@@ -636,7 +633,7 @@ p {
 
 @media (max-width: 992px) {
   :root {
-    --section-padding: 72px 0;
+    --space-section: 72px;
   }
 
   .hero .container,
@@ -657,7 +654,6 @@ p {
     grid-template-columns: 1fr 1fr;
   }
 
-  .hero-image,
   .about-image {
     order: -1;
   }
@@ -731,10 +727,6 @@ p {
 
   h1 {
     font-size: 2.2rem;
-  }
-
-  .hero {
-    padding: 48px 0 64px;
   }
 
   .hero-content p {
